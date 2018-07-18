@@ -12,6 +12,7 @@ Ext.define('mapros.view.login.Login',{
     title: 'Login Window',
     closable: false,
     autoShow: true,
+    constrain: true,
 
     items: {
         xtype: 'form',
