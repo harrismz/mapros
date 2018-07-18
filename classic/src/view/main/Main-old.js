@@ -20,7 +20,6 @@ Ext.define('mapros.view.main.Main', {
 
     controller: 'main',
     viewModel: 'main',
-    plugins: 'viewport',
 
     ui: 'navigation',
 
@@ -40,13 +39,7 @@ Ext.define('mapros.view.main.Main', {
             flex: 0
         },
         // iconCls: 'fa-th-list'
-        iconCls: 'fa-qrcode',
-        items: [{
-            xtype: 'button',
-            text: 'Logout',
-            margin: '10 0',
-            handler: 'onClickButton'
-        }]
+        iconCls: 'fa-qrcode'
     },
 
     tabBar: {

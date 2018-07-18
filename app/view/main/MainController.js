@@ -9,13 +9,26 @@ Ext.define('mapros.view.main.MainController', {
 
     alias: 'controller.main',
 
-    onItemSelected: function (sender, record) {
-        Ext.Msg.confirm('Confirm', 'Are you sure?', 'onConfirm', this);
-    },
+    // onItemSelected: function (sender, record) {
+    //     Ext.Msg.confirm('Confirm', 'Are you sure?', 'onConfirm', this);
+    // },
+    //
+    // onConfirm: function (choice) {
+    //     if (choice === 'yes') {
+    //         //
+    //     }
+    // },
 
-    onConfirm: function (choice) {
-        if (choice === 'yes') {
-            //
-        }
+    onClickButton: function() {
+        // Remove the localStorage key/value
+        localStorage.removeItem('LoggedIn');
+
+        // Remove Main View
+        this.getView().destroy();
+
+        // Add the Login Window
+        Ext.create({
+            xtype: 'login'
+        });
     }
 });
