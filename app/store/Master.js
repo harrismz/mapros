@@ -1,7 +1,7 @@
-Ext.define('mapros.store.Personnel', {
+Ext.define('mapros.store.Master', {
     extend: 'Ext.data.Store',
 
-    alias: 'store.personnel',
+    alias: 'store.master',
 
     fields: [
         'name', 'email', 'phone'

@@ -6,13 +6,28 @@ Ext.define('mapros.view.main.List', {
     xtype: 'mainlist',
 
     requires: [
-        'mapros.store.Personnel'
+        'mapros.store.Master',
+        'mapros.view.main.ListController',
+        'mapros.view.main.FormInput'
     ],
 
-    title: 'Personnel',
+    controller: 'list',
+
+    title: 'Grid Master',
 
     store: {
-        type: 'personnel'
+        type: 'master'
+    },
+
+    tbar: {
+        items: [{
+            xtype: 'button',
+            name: 'tambah',
+            text: 'Add Item',
+            listeners: {
+                click: 'addOnClick'
+            }
+        }]
     },
 
     columns: [
