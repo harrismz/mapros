@@ -2,12 +2,16 @@ Ext.define('mapros.view.main.FormInput',{
   extend: 'Ext.form.Panel',
   xtype: 'forminput',
 
+  requires: [
+    'mapros.view.main.form.FormController'
+  ],
+  controller: 'form',
   // title: 'Simple Form',
     bodyPadding: 5,
     width: 350,
 
     // The form will submit an AJAX request to this URL when submitted
-    url: 'save-form.php',
+    // url: 'save-form.php',
 
     // Fields will be arranged vertically, stretched to full width
     layout: 'anchor',
@@ -18,12 +22,16 @@ Ext.define('mapros.view.main.FormInput',{
     // The fields
     defaultType: 'textfield',
     items: [{
-        fieldLabel: 'First Name',
-        name: 'first',
+        fieldLabel: 'Name',
+        name: 'name',
         allowBlank: false
     },{
-        fieldLabel: 'Last Name',
-        name: 'last',
+        fieldLabel: 'Email',
+        name: 'email',
+        allowBlank: false
+    },{
+        fieldLabel: 'Phone',
+        name: 'phone',
         allowBlank: false
     }],
 
@@ -35,20 +43,8 @@ Ext.define('mapros.view.main.FormInput',{
         }
     }, {
         text: 'Submit',
-        formBind: true, //only enabled once the form is valid
-        disabled: true,
-        handler: function() {
-            var form = this.up('form').getForm();
-            if (form.isValid()) {
-                form.submit({
-                    success: function(form, action) {
-                       Ext.Msg.alert('Success', action.result.msg);
-                    },
-                    failure: function(form, action) {
-                        Ext.Msg.alert('Failed', action.result.msg);
-                    }
-                });
-            }
-        }
+        // formBind: true, //only enabled once the form is valid
+        // disabled: true,
+        handler: 'onSave'
     }]
 });

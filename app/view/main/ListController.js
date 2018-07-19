@@ -10,7 +10,6 @@ Ext.define('mapros.view.main.ListController', {
     alias: 'controller.list',
 
     addOnClick: function() {
-      console.log('terpanggil')
       let modal = Ext.create('Ext.window.Window',{
         title: 'Form Input',
         width: 400,

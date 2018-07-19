@@ -92,8 +92,8 @@ Ext.define('mapros.view.main.Main', {
             xtype: 'mainlist'
         }]
     }, {
-        title: 'Users',
-        iconCls: 'fa-user',
+        title: 'Data Master',
+        iconCls: 'fa-book',
         bind: {
             html: '{loremIpsum}'
         }
