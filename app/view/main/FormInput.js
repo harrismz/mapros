@@ -3,8 +3,10 @@ Ext.define('mapros.view.main.FormInput',{
   xtype: 'forminput',
 
   requires: [
+    'mapros.store.Master',
     'mapros.view.main.form.FormController'
   ],
+
   controller: 'form',
   // title: 'Simple Form',
     bodyPadding: 5,
@@ -17,6 +19,10 @@ Ext.define('mapros.view.main.FormInput',{
     layout: 'anchor',
     defaults: {
         anchor: '100%'
+    },
+
+    store: {
+        type: 'master'
     },
 
     // The fields
