@@ -40,13 +40,7 @@ Ext.define('mapros.view.main.Main', {
             flex: 0
         },
         // iconCls: 'fa-th-list'
-        iconCls: 'fa-qrcode',
-        items: [{
-            xtype: 'button',
-            text: 'Logout',
-            margin: '10 0',
-            handler: 'onClickButton'
-        }]
+        iconCls: 'fa-qrcode'
     },
 
     tabBar: {
@@ -56,6 +50,15 @@ Ext.define('mapros.view.main.Main', {
             overflowHandler: 'none'
         }
     },
+
+    // tbar: {
+    //     items: [{
+    //         xtype: 'button',
+    //         text: 'Logout',
+    //         margin: '10 0',
+    //         handler: 'onClickButton'
+    //     }]
+    // }
 
     responsiveConfig: {
         tall: {
@@ -85,29 +88,35 @@ Ext.define('mapros.view.main.Main', {
     },
 
     items: [{
-        title: 'Home',
+        title: 'Dashboard',
         iconCls: 'fa-home',
         // The following grid shares a store with the classic version's grid as well!
         items: [{
             xtype: 'mainlist'
         }]
     }, {
-        title: 'Users',
-        iconCls: 'fa-user',
+        title: 'Scanner',
+        iconCls: 'fa-chevron-circle-right',
         bind: {
             html: '{loremIpsum}'
         }
     }, {
-        title: 'Groups',
-        iconCls: 'fa-users',
+        title: 'Sequence',
+        iconCls: 'fa-chevron-circle-right',
         bind: {
             html: '{loremIpsum}'
         }
     }, {
-        title: 'Settings',
-        iconCls: 'fa-cog',
+        title: 'Line',
+        iconCls: 'fa-chevron-circle-right',
         bind: {
             html: '{loremIpsum}'
         }
     }]
+    // items: [{
+    //         xtype: 'button',
+    //         text: 'Logout',
+    //         margin: '10 0',
+    //         handler: 'onClickButton'
+    //     }]
 });

@@ -14,6 +14,7 @@ Ext.define('mapros.Application', {
 
     stores: [
         // TODO: add global / shared stores here
+        'Master'
     ],
 
     launch: function () {
