@@ -7,6 +7,8 @@ Ext.define('mapros.store.Master', {
         'name', 'email', 'phone'
     ],
 
+    autoSync: true,
+
     data: { items: [
         { name: 'Jean Luc', email: "jeanluc.picard@enterprise.com", phone: "555-111-1111" },
         { name: 'Worf',     email: "worf.moghsson@enterprise.com",  phone: "555-222-2222" },

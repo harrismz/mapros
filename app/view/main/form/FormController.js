@@ -23,9 +23,21 @@ Ext.define('mapros.view.main.form.FormController', {
                 }
             });
         }*/
-        let store = Ext.getStore('Master')
-        console.log(store)
+        let store = Ext.getStore('Master');
+        // let store = this.getStore('master');
+        let view = this.getView();
+        let name = view.down('textfield[name=name]').getValue();
+        let email = view.down('textfield[name=email]').getValue();
+        let phone = view.down('textfield[name=phone]').getValue();
+        store.add({
+            name : name,
+            email: email,
+            phone : phone
+        });
+        console.log({store});
+        // console.log((store.getData().getSource() || store.getData()).getRange());
+        return;
     },
 
-    
+
 });
