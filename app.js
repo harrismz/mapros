@@ -8,10 +8,9 @@ Ext.application({
 
     extend: 'mapros.Application',
 
-    // requires: [
-    //     'mapros.view.main.Main',
-    //     'mapros.view.login.Login'
-    // ],
+    requires: [
+        'mapros.view.main.Main'
+    ]
 
     // The name of the initial view to create. With the classic toolkit this class
     // will gain a "viewport" plugin if it does not extend Ext.Viewport. With the
